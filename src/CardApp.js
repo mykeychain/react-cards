@@ -42,13 +42,14 @@ function CardApp() {
         setPile(oldPile => (
             {
                 cards: [...oldPile.cards, newCard],
-                remaining: oldPile.remaining
+                remaining: resp.data.remaining
             }
         ));
     }
 
     // handleClick: 
     function handleClick() {
+        console.log("remaing cards: ", remaining)
         if (remaining === 0) {
             alert("Error: no cards remaining!")
         } else {
